@@ -30,6 +30,7 @@ bin/*
 .classpath
 .project
 .settings
+.DS_Store
 
 # Only for the public repository
 #"Quizzes and Exams"/
