@@ -351,10 +351,321 @@ public class Pointers {
 
   }
 
-  public static void main(String[] args) {
+  public String multiply(String num1, String num2) {
+    int[] res = new int[num1.length() + num2.length()];
+    for (int i = num1.length() - 1; i >= 0; i--) {
+      for (int j = num2.length() - 1; j >= 0; j--) {
+        int current = res[i + j + 1] + (num1.charAt(i) - '0') * (num2.charAt(j) - '0');
+        res[i + j + 1] = current % 10;
+        res[i + j] += current / 10;
+      }
+    }
+
+    String result = "";
+    for (int i = 0; i < res.length; i++) {
+      if (!result.equals("") || res[i] != 0 || i == res.length - 1) {
+        result += res[i];
+      }
+    }
+
+    return result;
+  }
+
+  public int removeElement(int[] nums, int val) {
+    int index = 0;
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] != val) {
+        nums[index++] = nums[i];
+      }
+    }
+
+    return index;
+  }
+
+
+  public int maxProduct(String[] words) {
+    int res = 0;
+    for (int i = 0; i < words.length; i++) {
+      for (int j = i + 1; j < words.length; j++) {
+        res = Math.max(res, hasCommonWord(words[i], words[j]));
+
+      }
+    }
+    return res;
+  }
+
+  public int hasCommonWord(String word1, String word2) {
+    int[] count = new int[26];
+    for (char c : word1.toCharArray()) {
+      count[c - 'a']++;
+    }
+    for (char c : word2.toCharArray()) {
+      if (count[c - 'a'] != 0) {
+        return 0;
+      }
+    }
+
+    return word1.length() * word2.length();
+  }
+
+  public String reverseWords(String s) {
+    s = s.trim();
+    while(s.contains("  ")){
+      s = s.replaceAll("  "," ");
+    }
+    int start =0;
+    int i=0;
+    int j=s.length()-1;
+    int end = s.length();
+    while(i<j){
+      while(s.charAt(i)!=' '){
+        i++;
+      }
+      while(s.charAt(j)!=' '){
+        j--;
+      }
+      int lenLeft = i-start;
+      int lenRight = end-j-1;
+      if(i>j){
+        return s;
+      }
+      if(start>0){
+        s = s.substring(0,start)+s.substring(j+1,end)+s.substring(i,j+1)+s.substring(start,i)+s.substring(end);
+      }else {
+                              s =s.substring(j+1,end)+s.substring(i,j+1)+s.substring(start,i);
+
+      }
+      i = i+lenRight-lenLeft+1;
+      j = j+(lenRight-lenLeft)-1;
+      start = i;
+      end = j+1;
+    }
+
+    return s;
+  }
+
+  public List<Integer> arraysIntersection(int[] arr1, int[] arr2, int[] arr3) {
+    int i=0;
+    int j=0;
+    int k=0;
+    List<Integer> res = new ArrayList<>();
+    while (i<arr1.length&&j<arr2.length&&k<arr3.length){
+      if(arr1[i]==arr2[j]&&arr1[i]==arr3[k]){
+        res.add(arr1[i]);
+        i++;
+        j++;
+        k++;
+      }else {
+        if(arr1[i]<arr2[j]||arr1[i]<arr3[k]){
+          i++;
+        }else if(arr2[j]<arr1[i]||arr2[j]<arr3[k]){
+          j++;
+        }else if(arr3[k]<arr1[i]||arr3[k]<arr2[j]){
+          k++;
+        }
+      }
+
+    }
+
+    return res;
+  }
+
+  public List<Integer> pancakeSort(int[] arr) {
+    int left = 0;
+    int right = arr.length-1;
+    List<Integer> res = new ArrayList<>();
+    while(true){
+      int j = right;
+
+      while(arr[j]>arr[j-1]){
+        j--;
+        if(j<=left){
+          break;
+        }
+      }
+
+      if(j==0){
+        break;
+      }
+      reverse(arr,0,j);
+      res.add(j+1);
+    }
+
+    return res;
+  }
+
+  public void reverse(int[] arr, int start,int end){
+    while(start<end){
+      int temp = arr[start];
+      arr[start] = arr[end];
+      arr[end] = temp;
+      start++;
+      end--;
+    }
+  }
+
+  public int partitionArray(int[] nums, int k) {
+    // write your code here
+    int i = 0;
+    int j = nums.length - 1;
+    while (i < j) {
+      while (nums[i] < k) {
+        i++;
+        if (i > j) {
+          break;
+        }
+      }
+      while (nums[j] >= k) {
+        j--;
+        if (j <= i) {
+          break;
+        }
+      }
+      if (j <= i) {
+        break;
+      }
+      int temp = nums[i];
+      nums[i] = nums[j];
+      nums[j] = temp;
+    }
+
+    return i;
+  }
+
+  public void partition2(int[] nums, int low, int high) {
+    // write your code here
+    int i=0;
+    int j=nums.length-1;
+    while(i<j){
+      while(nums[i]<low){
+        i++;
+        if(i>j)break;
+      }
+
+      while(nums[j]>=low){
+        j--;
+        if(j<i)break;
+      }
+      if(i>=j)break;
+      int temp = nums[i];
+      nums[i] = nums[j];
+      nums[j] = temp;
+    }
+
+    j=nums.length-1;
+    while(i<j){
+      while(nums[i]<=high){
+        i++;
+        if(i==j)break;
+      }
+
+      while(nums[j]>high){
+        j--;
+        if(j==i)break;
+      }
+      if(i>=j)break;
+      int temp = nums[i];
+      nums[i] = nums[j];
+      nums[j] = temp;
+    }
+
+  }
+
+  public void sortColors2(int[] colors, int k) {
+    sortColors2(colors,0,colors.length-1);
+  }
+
+  public void  sortColors2(int[] colors,int low,int high){
+    if(high<=low)return;
+    int j = partitionColor(colors,low,high);
+    sortColors2(colors,low,j-1);
+    sortColors2(colors,j+1,high);
+
+  }
+
+  public int partitionColor(int[] colors,int low,int high){
+    int i=low+1;
+    int j=high;
+    while (true){
+      while (colors[i]<colors[low]){
+        i++;
+        if(i>j)break;
+      }
+
+      while (colors[j]>=colors[low]){
+        j--;
+        if(j<i)break;
+      }
+      if(j<=i)break;
+      swapColor(colors,i,j);
+    }
+    swapColor(colors,low,j);
+    return j;
+  }
+
+  public void swapColor(int[] colors,int i,int j){
+    int temp = colors[i];
+    colors[i] = colors[j];
+    colors[j] = temp;
+  }
+
+  public void rainbowSort(int[] colors, int start,int end,int from, int to){
+    if(start>=end||from==to){
+      return;
+    }
+
+    int pivot = (from+to)/2;
+    int i=start;
+    for(int j=start;i<=end;j++){
+      if(colors[j]<=pivot){
+        swapColor(colors,i,j);
+        i++;
+      }
+    }
+
+    rainbowSort(colors,start,i-1,from,pivot);
+    rainbowSort(colors,i+1,end,pivot+1,to);
+  }
+
+  public void sortColors2ByCountingSort(int[] colors, int k) {
+    int len = colors.length;
+    if (len <= 0) {
+      return;
+    }
+    int index = 0;
+    while (index < len) {
+      int temp = colors[index] - 1;
+      if (colors[index] <= 0) {
+        index++;
+      } else {
+        if (colors[temp] <= 0) {
+          colors[temp]--;
+          colors[index] = 0;
+          index++;
+        } else {
+          swapColor(colors, index, temp);
+          colors[temp] = -1;
+        }
+      }
+
+    }
+  }
+
+
+
+
+    public static void main(String[] args) {
     Pointers pointers = new Pointers();
-    pointers.findTheDistanceValue(new int[]{4,5,8},
-new int[]{10,9,1,8},2);
+      int[] arr1 = {1,2,3,4,5}, arr2 = {1,2,5,7,9}, arr3 = {1,3,4,5,8};
+//    pointers.pancakeSort(new int[]{3,2,4,1});
+//    pointers.partitionArray(new int[]{3,2,1},2);
+//    pointers.partitionArray(new int[]{7,7,9,8,6,6,8,7,9,8,6,6},10);
+    pointers.sortColors2(new int[]{3,2,2,1,4},4);
+//    pointers.partitionArray(new int[]{3,2,2,1},2);
+//    pointers.findTheDistanceValue(new int[]{4,5,8},
+//new int[]{10,9,1,8},2);
+//    pointers.reverseWords("the sky is blue");
+//    pointers.reverseWords("a good   example");
 //    pointers.trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1});
 
   }
