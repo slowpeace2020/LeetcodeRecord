@@ -15,6 +15,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import org.artofsolving.jodconverter.OfficeDocumentConverter;
+import org.artofsolving.jodconverter.office.ExternalOfficeManagerConfiguration;
+import org.artofsolving.jodconverter.office.OfficeConnectionProtocol;
+import org.artofsolving.jodconverter.office.OfficeManager;
 
 public class ConcatenatePDF {
 
@@ -65,34 +69,33 @@ public class ConcatenatePDF {
     }
 
 
-    /**
-     *
-     */
-    public static void pptToPDF(List<String> files) {
-        //创建Presentation实例
-        Presentation presentation = new Presentation();
-
-        for(String filePath:files){
-            //加载PPT示例文档
-            try {
-                presentation.loadFromFile(filePath);
-                //保存为PDF
-                presentation.saveToFile(System.getProperty("user.home")+filePath.substring(filePath.lastIndexOf("/")).replace("ppt","pdf"), FileFormat.PDF);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            break;
- }
-
-        presentation.dispose();
-    }
-
     public static void main(String[] args) {
         List<String> fileList = new ArrayList<>();
-        fileList = getFiles("/Users/shanchu/Documents/CSYE6200 class/lecture3",fileList);
+        fileList = getFiles("/Users/shanchu/IdeaProjects/LeetcodeRecord/edu.study/utils",fileList);
 //        mergePDF(fileList,"/Users/shanchu/IdeaProjects/LeetcodeRecord/edu.study/utils","lecture3.pdf");
         pptToPDF(fileList);
+
+    }
+
+    /**
+     *
+     * @param files
+     */
+    public static void pptToPDF(List<String> files) {
+
+        //创建Presentation实例
+
+        for (String filePath : files) {
+            //加载PPT示例文档
+            File inputFile = new File(filePath,"MacOS/soffice.bin");
+            File outputFile = new File(filePath.replace("pptx", "pdf").replace("ppt", "pdf"),"MacOS/soffice.bin");
+            //保存为PDF
+
+            ppt2PDF(inputFile, outputFile);
+
+            break;
+        }
+
     }
 
     private static List<String> getFiles(String filePath, List<String> fileList) {
@@ -119,6 +122,9 @@ public class ConcatenatePDF {
 //                getFiles(file1.getAbsolutePath(), fileList);
             } else {
                 System.out.println(file1.getAbsolutePath());
+                if(!file1.getAbsolutePath().endsWith("ppt")&&!file1.getAbsolutePath().endsWith("pptx")){
+                    continue;
+                }
                 fileList.add(file1.getAbsolutePath());
             }
         }
@@ -126,4 +132,55 @@ public class ConcatenatePDF {
         return fileList;
 
     }
+
+
+    /**
+
+     * ppt转pdf
+
+     * @param inputFile 输入文件
+
+     * @param outputFile 输出文件
+
+     * @author ServerZhang
+
+     * @date 2016年9月20日
+
+     */
+
+    public static void ppt2PDF(File inputFile, File outputFile) {
+
+        // 如果目标路径不存在, 则新建该路径
+
+        if (!outputFile.getParentFile().exists()) {
+
+            outputFile.getParentFile().mkdirs();
+
+        }
+
+
+
+        // convert
+
+        ExternalOfficeManagerConfiguration configuration =
+
+            new ExternalOfficeManagerConfiguration();
+
+        configuration.setConnectionProtocol(OfficeConnectionProtocol.SOCKET);
+
+        configuration.setPortNumber(8100);
+
+        OfficeManager officeManager= configuration
+
+            .buildOfficeManager();
+
+        OfficeDocumentConverter converter =
+
+            new OfficeDocumentConverter(officeManager);
+
+        converter.convert(inputFile, outputFile);
+
+    }
+
+
 }

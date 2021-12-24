@@ -9,6 +9,11 @@ public class Lecture7 {
   public static void main(String[] args) {
     Lecture7 test = new Lecture7();
     test.simplePredict();
+
+//    Lambda expression
+//    Arrays.sort(rosterAsArray,(a, b) -> Person.compareByAge(a, b) );
+//    – Method reference
+//    Arrays.sort(rosterAsArray, Person::compareByAge);
   }
 
   public static void imperativeAndDelativeProgramming() {
@@ -59,15 +64,20 @@ public class Lecture7 {
     thread.start();
   }
 
+  void runnablelambda2() {
+    Thread thread = new Thread( () -> System.out.println("run thread in background..."));
+    thread.start();
+  }
+
   public void simpleStream() {
     List<Integer> list = Arrays.asList(5, 2, 1, 3, 4);
     list.forEach(n -> System.out.print(n + " "));
     System.out.println("reduce to sorted add suset");
     list.stream()
-        .filter(n -> n % 2 == 1)
-        .sorted()
-        .map(n -> n * 100)
-        .forEach(n -> System.out.print(n + ", "));
+        .filter(n -> n % 2 == 1)//过滤
+        .sorted()               //排序
+        .map(n -> n * 100)      //对值进行操作
+        .forEach(n -> System.out.print(n + ", "));//遍历打印
     System.out.println();
 
   }
