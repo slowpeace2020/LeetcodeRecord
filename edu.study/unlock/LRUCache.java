@@ -35,12 +35,4 @@ public class LRUCache {
         }
         map.put(key,value);
     }
-
-    public static void main(String[] args) {
-        LRUCache test = new LRUCache(2);
-        test.put(1,1);
-        test.put(2,2);
-        test.get(1);
-        test.put(3,3);
-    }
 }
