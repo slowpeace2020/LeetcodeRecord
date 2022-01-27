@@ -597,15 +597,238 @@ public class DPString {
 
     }
 
-    public static void main(String[] args) {
+    public int minRefuelStops(int target, int startFuel, int[][] stations) {
+            Queue<Integer> queue = new PriorityQueue<>();
+            int i=0;
+            int res;
+            //能到达的距离小于目的地时，需要加油
+            for(res=0;startFuel<target;res++){
+                //把所有能到达的加油站的油都放进队列
+                while (i< stations.length&&stations[i][0]<=startFuel){
+                    queue.offer(-stations[i++][1]);
+                }
+                //还没到目的地，无油可加
+                if(queue.isEmpty()){
+                    return -1;
+                }
+                //加油就加在这些能到的加油站中提供最多的油的站
+                startFuel+=-queue.poll();
+            }
+
+            return res;
+    }
+
+    public int numRollsToTarget(int n, int k, int target) {
+        int[][] dp = new int[n+1][target+1];
+        for(int i=1;i<=k;i++){
+            dp[1][i]=1;
+        }
+        int mod = (int)(1e9+7);
+        for(int i=2;i<=n;i++){
+            for(int j=2;j<=target;j++){
+                for(int val=1;val<j&&val<=k;val++){
+                    dp[i][j] =(dp[i][j]+dp[i-1][j-val]*dp[1][val])%mod;
+                }
+            }
+
+        }
+
+        return dp[n][target];
+    }
+
+    public int countVowelPermutation(int n) {
+        long[] dp = new long[5];
+        Arrays.fill(dp,1);
+        int mod=(int)(1e9+7);
+        for(int i=2;i<=n;i++){
+            long[] temp = new long[5];
+            temp[0] = dp[1]%mod;
+            temp[1] = (dp[0]+dp[2])%mod;
+            temp[2] = (dp[0]+dp[1]+dp[3]+dp[4])%mod;
+            temp[3] = (dp[2]+dp[4])%mod;
+            temp[4] = dp[0]%mod;
+            dp=temp;
+        }
+
+        long res = 0;
+        for(long num:dp){
+            res+=num;
+        }
+
+        res = res%mod;
+
+        return (int)res;
+
+    }
+
+    public int dieSimulator(int n, int[] rollMax) {
+        return (int)dfs(n, rollMax, 6, 0, new Long[n + 1][7][16]);//6 is dummy value for prev
+    }
+
+    /**
+     * 递归查找n个数字组合的数量
+     * @param n  数字组合长度
+     * @param rollMax  每个数字连续出现的限制
+     * @param prev   前一个数字的值
+     * @param count  前一个数字连续出现的长度
+     * @param memo   存储i个数字组合长度结尾为j+1, j+1连续出现次数为k时的有效组合数量，避免重复计算
+     * @return
+     */
+    private long dfs(int n, int[] rollMax, int prev, int count, Long[][][] memo){//prev -> previous face, count -> count of continuous occurrence of prev face
+        if(n == 0) return 1;
+
+        if(memo[n][prev][count] != null) return memo[n][prev][count];//memoized result
+        long res = 0;
+
+        for(int i = 0; i < 6; i++){
+            if(i == prev && count >= rollMax[i]) continue;//we can't use this face more than rollMax[i]
+
+            if(i == prev)//using same face as previous then count + 1
+                res = (res + dfs(n - 1, rollMax, i, count + 1, memo)) % 1000000007;
+            else//otherwise set count to 1
+                res = (res + dfs(n - 1, rollMax, i, 1, memo)) % 1000000007;
+        }
+        return memo[n][prev][count] = res;//memoize result
+    }
+
+
+    public int lastStoneWeightII(int[] stones) {
+        //能否挑选出石子重量和为i
+         boolean[] dp = new boolean[1501];
+         dp[0] =true;
+         int sum = 0;
+         //遍历石子
+         for(int stone:stones){
+             //累计石子总重量
+             sum+=stone;
+             //每加入一个石子，更新dp
+             for(int i=Math.min(sum,1500);i>=stone;i++){
+                 dp[i]=dp[i]||dp[i-stone];
+             }
+         }
+
+         //两个石子相减的差，相当于将石子分为尽可能接近的两堆之差
+         for(int i=sum/2;i>=0;i--){
+             if(dp[i]){
+                 return sum-2*i;
+             }
+         }
+         return 0;
+    }
+
+
+    public int coinChange(int[] coins, int amount) {
+        if(amount==0){
+            return 0;
+        }
+        int[] dp = new int[amount+1];
+        Arrays.fill(dp,-1);
+        dp[0] = 0;
+        for(int coin:coins){
+                for(int i=coin;i<=amount;i++){
+                dp[i]=dp[i]==-1?dp[i-coin]+1:Math.min(dp[i],dp[i-coin]+1);
+            }
+        }
+
+        return dp[amount];
+    }
+
+    public int change(int amount, int[] coins) {
+        int[] dp = new int[amount+1];
+        dp[0]=1;
+        for(int coin:coins){
+            for(int i=coin;i<=amount;i++){
+                dp[i]+=dp[i-coin];
+            }
+        }
+
+        return dp[amount];
+    }
+
+
+    public int maxProfit(int[] prices) {
+        //当前价格下，处于卖出，持有，冷冻状态下的最大收益
+        int sold = 0, hold = Integer.MIN_VALUE, rest = 0;
+        for (int i=0; i<prices.length; ++i)
+        {
+            //保存之前卖出状态下的收益
+            int prvSold = sold;
+            //当前卖出状态下的最大收益为之前持有的收益加上当前卖出动作的收益
+            sold = hold + prices[i];
+            //当前持有状态下的最大收益，
+            // 可能是继续持有，也可能是之前是冷冻状态然后买进持有
+            hold = Math.max(hold, rest-prices[i]);
+            //当前状态是冷冻状态，可以是之前的冷冻状态继续保持，也可以是之前卖出，现在冷冻期
+            rest = Math.max(rest, prvSold);
+        }
+        return Math.max(sold, rest);
+    }
+
+
+    private int[][] m = new int[1001][1001];
+    public int minHeightShelves(int[][] books, int shelfWidth) {
+        return minHeightShelves(books, shelfWidth, 0, 0, 0);
+    }
+
+    private int minHeightShelves(int[][] books, int maxWidth, int idx, int w, int h) {
+        if (idx >= books.length) return h;
+        if (m[idx][w] != 0) return m[idx][w];
+        return m[idx][w] = Math.min(
+                // min of placing book in new shelf, updating latest h and w of current book
+                h + minHeightShelves(books, maxWidth, idx+1, books[idx][0], books[idx][1]),
+                // or placing book in same shelf and check min h
+                w + books[idx][0] > maxWidth ? Integer.MAX_VALUE : minHeightShelves(books, maxWidth, idx+1, w + books[idx][0], Math.max(h, books[idx][1]))
+        );
+    }
+
+
+
+
+        public static void main(String[] args) {
         System.out.println((2&(1<<1)));
         DPString test = new DPString();
 
 //        System.out.println(test.canIWin(10,11));
-        test.deepestLeavesSum(test.constructTree());
+        test.coinChange(new int[]{1,2,5}, 11);
     }
 
-    public void  showArray(int[][] dp){
+    public int findPaths(int m, int n, int maxMove, int startRow, int startColumn) {
+        if(maxMove<=0){
+            return 0;
+        }
+        int mod = (int) (1e9+7);
+        int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
+        //只记录当前步数状态下，到达坐标i,j的方法数量，不用三维记录所有，理不清楚
+        int[][] dp=new int[m][n];
+        dp[startRow][startColumn] = 1;
+        int res =0;
+        for(int step=0;step<maxMove;step++){
+            //下一个步数状态下的路径数量
+            //避免更新干扰
+            int[][] temp = new int[m][n];
+            for(int i=0;i<m;i++){
+                for(int j=0;j<n;j++){
+                    for(int[] dir:dirs){
+                        int x = i+dir[0];
+                        int y = i+dir[1];
+                        if(x<0||y<0||x>=m||y>=n){
+                            res = (res+dp[i][j])%mod;
+                        }else {
+                            temp[x][y]=(temp[x][y]+dp[i][j])%mod;
+                        }
+                    }
+                }
+            }
+            dp = temp;
+        }
+
+        return res;
+    }
+
+
+
+        public void  showArray(int[][] dp){
         for(int i=0;i<dp.length;i++){
             for(int j=0;j<dp[0].length;j++){
                 System.out.print(dp[i][j]+" ");
