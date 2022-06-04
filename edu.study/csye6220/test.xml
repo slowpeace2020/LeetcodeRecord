@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+        "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+    <!-- Give name to FinalizePurchaseServlet. This servlet
+         will later be mapped to the URL /ssl/FinalizePurchase
+         (by means of servlet-mapping and url-pattern).
+         Then, that URL will be designated as one requiring
+         SSL (by means of security-constraint and
+         transport-guarantee). -->
+    <servlet>
+        <servlet-name>
+            FinalizePurchaseServlet
+        </servlet-name>
+        <servlet-class>
+            hotdotcom.FinalizePurchaseServlet
+        </servlet-class>
+    </servlet>
+
+    <!-- A servlet that redirects users to the home page. -->
+    <servlet>
+        <servlet-name>Redirector</servlet-name>
+        <servlet-class>hotdotcom.RedirectorServlet</servlet-class>
+    </servlet>
+
+    <!-- Associate previously named servlet with custom URL. -->
+    <servlet-mapping>
+        <servlet-name>
+            FinalizePurchaseServlet
+        </servlet-name>
+        <url-pattern>
+            /ssl/FinalizePurchase
+        </url-pattern>
+    </servlet-mapping>
+    <!-- Turn off invoker. Send requests to index.jsp. -->
+    <servlet-mapping>
+        <servlet-name>Redirector</servlet-name>
+        <url-pattern>/servlet/*</url-pattern>
+    </servlet-mapping>
+    <!-- If URL gives a directory but no filename, try index.jsp
+         first and index.html second. If neither is found,
+         the result is server-specific (e.g., a directory
+         listing). -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- Protect everything within the "investing" directory. -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Investing</web-resource-name>
+            <url-pattern>/investing/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>registered-user</role-name>
+            <role-name>administrator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <!-- URLs of the form http://host/webAppPrefix/ssl/blah
+         require SSL and are thus redirected to
+         https://host/webAppPrefix/ssl/blah. -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Purchase</web-resource-name>
+            <url-pattern>/ssl/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>registered-user</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+    <!-- Only users in the administrator role can access
+         the delete-account.jsp page within the admin
+         directory. -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Account Deletion</web-resource-name>
+            <url-pattern>/admin/delete-account.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>administrator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <!-- Tell the server to use form-based authentication. -->
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/admin/login.jsp</form-login-page>
+            <form-error-page>/admin/login-error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+</web-app>
