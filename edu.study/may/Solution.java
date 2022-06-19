@@ -313,6 +313,60 @@ public class Solution {
 
     }
 
+    public int subarraysWithKDistinct(int[] nums, int k) {
+        int res =0;
+        Map<Integer,Integer> map = new HashMap<>();
+        int start =0;
+        for(int i=0;i<nums.length;i++){
+            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+            while(map.size()>k){
+                if(map.get(nums[start])==1){
+                    map.remove(nums[start]);
+                }
+                if(map.getOrDefault(nums[start],0)>1){
+                    map.put(nums[start],map.get(nums[start])-1);
+                }
+                start++;
+            }
+
+            if(map.size()==k){
+                res+=(i-start+1-k+1);
+            }
+        }
+
+        return res;
+    }
+
+    public int countDistinct(int[] nums, int k, int p) {
+        int start = 0;
+        Map<Integer,Integer> map = new HashMap<>();
+
+        int count=0;
+        int res = 0;
+        for(int i=0;i<nums.length;i++){
+            int value = nums[i];
+            map.put(value,map.getOrDefault(value,0)+1);
+            if(value%p==0){
+                count++;
+            }
+
+            while(count>k){
+                if(map.get(nums[start])==1){
+                    map.remove(nums[start]);
+                }else{
+                    map.put(nums[start],map.getOrDefault(nums[start],0)-1);
+                }
+                start++;
+                if(nums[start]%p==0){
+                    count--;
+                }
+            }
+            res+=i-start+1;
+        }
+
+        return res;
+    }
+
     public static void main(String[] args) {
         Solution solution = new Solution();
 //        TreeNode root = new TreeNode(1);
@@ -326,7 +380,7 @@ public class Solution {
 
 //        solution.largestRectangleArea(new int[]{2,1,2});
 
-        solution.minOperations(new int[]{1,2,3,4,5,6},new int[]{1,1,2,2,2,2});
+        solution.countDistinct(new int[]{2,3,3,2,2},2,2);
     }
 
     public String removeOuterParentheses(String S) {
