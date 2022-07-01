@@ -1,6 +1,9 @@
 package course;
 
+import java.util.List;
+
 public class LinkedList<Item> {
+
     public void add(Item item) {
         Element tail = head;
         head = new Element(item, tail);
