@@ -1,10 +1,10 @@
 五月&六月的历史题目为: (共74题)
 20220501 [打卡] 416; [每日] 1305; 
 20220502 [打卡] 1049; [每日] 591; 
-20220503 [打卡] 10,279; [每日] 937; 
-20220504 [打卡] 322; [每日] 1823; 
-20220505 [打卡] 518; [每日] 713; 
-20220506 [复习] 1049,279,416; [每日] 933; 
+✅7/4/2022 20220503 [打卡] 10,279; [每日] 937; 
+✅7/4/2022 20220504 [打卡] 322; [每日] 1823; 
+✅7/1/2022 20220505 [打卡] 518; [每日] 713; 
+✅7/1/2022 20220506 [复习] 1049,279,416; [每日] 933; 
 ✅7/1/2022 20220507 [每日] 433; 
 ✅7/1/2022 20220508 [打卡] 474; [每日] 442; 
 ✅6/29/2022 20220509 [打卡] 494; [每日] 942; 
@@ -29,14 +29,14 @@
 ✅6/5/2022 20220528 [复习] 1155,1480; [每日] 1021; 
 ✅6/5/2022 20220529 [打卡] 456; [复习] 1588; [每日] 468; 
 ✅6/4/2022 20220530 [打卡] 496,503; [每日] 1022; 
-527	Word Abbreviation	String		Medium
-68	Text Justification	String		Medium
-418*	Sentence Screen Fitting	String		Medium
-320	Generalized Abbreviation	String		
-2261	K Divisible Elements Subarrays	Rolling Hash		Medium
-2305	Fair Distribution of Cookies	DFS		Hard
-1723	Find Minimum Time to Finish All Jobs	DFS	DP	Hard
-351*	Android Unlock Patterns	DFS		Medium
+✅7/4/2022 527	Word Abbreviation	String		Medium
+✅7/4/2022 68	Text Justification	String		Medium
+✅7/5/2022 418*	Sentence Screen Fitting	String		Medium
+✅7/5/2022 320	Generalized Abbreviation	String		
+✅7/5/2022 2261	K Divisible Elements Subarrays	Rolling Hash		Medium
+✅7/5/2022 2305	Fair Distribution of Cookies	DFS		Hard
+✅7/5/2022 1723	Find Minimum Time to Finish All Jobs	DFS	DP	Hard
+✅7/5/2022 351*	Android Unlock Patterns	DFS		Medium
 2280	Minimum Lines to Represent a Line Chart	Math		Medium
 2221	Find Triangular Sum of an Array	Math		Medium
 2197	Replace Non-Coprime Numbers in Array	Stack		Hard
