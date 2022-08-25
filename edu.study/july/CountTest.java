@@ -377,15 +377,104 @@ public class CountTest {
     }
 
 
+    public List<Integer> replaceNonCoprimes(int[] nums) {
+        List<Integer> list = new ArrayList<>();
+        for(int num:nums){
+            list.add(num);
+        }
+        return replaceCoprimes(list);
+    }
+
+    private List<Integer> replaceCoprimes(List<Integer> list){
+        List<Integer>  res = new ArrayList<>();
+        int size = list.size();
+        if(size<=1){
+            return list;
+        }
+
+        int find = -1;
+        int gcd = 1;
+        int pre = list.get(0);
+        for(int i=1;i<size;i++){
+            gcd = getGCD(pre,list.get(i));
+            if(gcd>1){
+                find=1;
+
+                pre = list.get(i)/gcd*pre;
+                while(i+1<size&&getGCD(pre,list.get(i+1))>1){
+                    pre = list.get(i+1)/gcd*pre;
+                    i++;
+                }
+                  res.add(pre);
+
+            }else{
+                res.add(list.get(i));
+                pre = list.get(i);
+            }
+        }
+        if(find==-1){
+            return list;
+        }
 
 
+        return replaceCoprimes(res);
+
+    }
+
+    private int getGCD(int a, int b){
+        if(a<b){
+            return getGCD(b,a);
+        }
+        while(b>0){
+            int c = a%b;
+            a = b;
+            b = c;
+        }
+
+        return a;
+    }
 
 
+    public long sellingWood(int m, int n, int[][] prices) {
+        long[][] dp = new long[m+1][n+1];
+
+        for(int[] price:prices){
+            for(int i=m;i>=price[0];i--){
+                for(int j=n;j>=price[1];j--){
+                    dp[i][j]=Math.max(dp[i][j],dp[i-price[0]][j-price[1]]+price[2]);
+                }
+            }
+        }
+
+        return dp[m][n];
+    }
+
+    public int getMaxProfit(int[] numbers,int k){
+        int n = numbers.length;
+        int[] prefixSum = new int[n+1];
+        for(int i=0;i<n;i++){
+            prefixSum[i+1] = prefixSum[i]+numbers[i];
+        }
+        int res = numbers[0];
+        for(int i=0;i<n;i++){
+            if(i<k){
+                res = Math.max(res,prefixSum[i+1]);
+            }else{
+                for(int j=i-k;j<i;j++){
+                    res = Math.max(res,prefixSum[i+1]-prefixSum[j+1]);
+                }
+            }
+        }
+        System.out.println(res);
+        return res;
+    }
 
         public static void main(String[] args) {
         CountTest test = new CountTest();
+//        int[] numbers = new int[]{-3,4,3,-2,2,5};
+        int[] numbers = new int[]{4,3,-2,9,-4,2,7};
+        test.getMaxProfit(numbers,6);
 
-        test.distributeCookies(new int[]{6,1,3,2,2,4,1,2},3);
 
     }
 }

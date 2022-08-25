@@ -37,46 +37,59 @@
 ✅7/5/2022 2305	Fair Distribution of Cookies	DFS		Hard
 ✅7/5/2022 1723	Find Minimum Time to Finish All Jobs	DFS	DP	Hard
 ✅7/5/2022 351*	Android Unlock Patterns	DFS		Medium
-2280	Minimum Lines to Represent a Line Chart	Math		Medium
-2221	Find Triangular Sum of an Array	Math		Medium
-2197	Replace Non-Coprime Numbers in Array	Stack		Hard
+✅7/6/2022 2280	Minimum Lines to Represent a Line Chart	Math		Medium
+✅7/6/2022 2221	Find Triangular Sum of an Array	Math		Medium
+✅7/6/2022 2197	Replace Non-Coprime Numbers in Array	Stack		Hard
 2282*	Number of People That Can Be Seen in a Grid	Stack		Hard
-1944	Number of Visible People in a Queue	Stack		Hard
+✅7/7/2022 1944	Number of Visible People in a Queue	Stack		Hard
 1102*	Path With Maximum Minimum Value	Binary Search		Medium
-2302	Count Subarrays With Score Less Than K	Count Subarray By Element	Binary Search	Hard
-2311	Longest Binary Subsequence Less Than or Equal to K	Greedy		Hard
-				
-				
-				
-2267	Check if There Is a Valid Parentheses String Path	DP		Hard
-2222	Number of Ways to Select Buildings	DP		Medium
-2312	Selling Pieces of Wood	DP		Medium
-2272	Substring With Largest Variance	DP		Hard
-152	Maximum Product Subarray	DP		Medium
-1186	Maximum Subarray Sum with One Deletion	DP		Medium
-53	Maximum Subarray	DP		Easy
-1146	Snapshot Array	Design	Binary Search	Hard
+✅7/8/2022 2311	Longest Binary Subsequence Less Than or Equal to K	Greedy		Hard
+✅7/8/2022 2267	Check if There Is a Valid Parentheses String Path	DP		Hard
+✅7/8/2022 2222	Number of Ways to Select Buildings	DP		Medium
+✅7/10/2022 2312 Selling Pieces of Wood	DP		Medium
+✅7/15/2022 2272 Substring With Largest Variance	DP		Hard
+✅7/15/2022 2272 152	Maximum Product Subarray	DP		Medium
+✅7/30/2022 1186	Maximum Subarray Sum with One Deletion	DP		Medium
+✅7/30/2022 53	Maximum Subarray	DP		Easy
+✅8/01/2022 1146	Snapshot Array	Design	Binary Search	Hard
+===========7-11===============
 642*	 Design Search Autocomplete System	Design	Trie	Hard
-2296	Design a Text Editor
-	Design	LinkedList	Medium
-2166	Design Bitset	Design		Medium
-2227	Encrypt and Decrypt Strings	Design		Medium
+✅8/01/2022 2296	Design a Text Editor
+✅8/01/2022 2166	Design Bitset	Design		Medium
+✅8/01/2022 2227	Encrypt and Decrypt Strings	Design		Medium
 631*	Design Excel Sum Formula	Design		Medium
-1617	Count Subtrees With Max Distance Between Cities	BFS	Tree	Hard
-1654	Minimum Jumps to Reach Home	BFS		Hard
-1263	Minimum Moves to Move a Box to Their Target Location	BFS	deque	Hard
+✅8/01/2022 1617	Count Subtrees With Max Distance Between Cities	BFS	Tree	Hard
+===========7-12===============
+✅8/04/2022 1654	Minimum Jumps to Reach Home	BFS		Hard
+✅8/04/2022 1263	Minimum Moves to Move a Box to Their Target Location	BFS	deque	Hard
 2045	Second Minimum Time to Reach Destination	BFS		Medium
-2101	Detonate the Maximum Bombs	BFS		Medium
-2289	Steps to Make Array Non-decreasing	BFS	Stack	Hard
+✅8/05/2022 2101	Detonate the Maximum Bombs	BFS		Medium
+===========7-13===============
+✅8/18/2022 2289	Steps to Make Array Non-decreasing	BFS	Stack	Hard
+✅8/19/2022 1776
+✅8/19/2022 1673
+✅8/19/2022 1671
+✅8/19/2022 1425
+✅8/19/2022 1130
+✅8/19/2022 907
+✅8/24/2022 901
+✅8/24/2022 856
+✅8/24/2022 503
+✅8/24/2022 496
+✅8/24/2022 84
+✅8/24/2022 42
 2290	Minimum Obstacle Removal to Reach Corner	BFS		Medium
 2258	Escape the Spreading Fire	BFS	Binary Search	Hard
 490*	The Maze	BFS		Easy
+===========7-14===============
 2306	Naming a Company	Greedy		Hard
 2275	Largest Combination With Bitwise AND Greater Than Zero	Greedy	Bit Manipulation	Medium
 2216	Minimum Deletions to Make Array Beautiful	Greedy		Medium
+===========7-15===============
 2234	Maximum Total Beauty of the Gardens	Greedy		Hard
 2233	Maximum Product After K Increments	Greedy		Hard
 2271	Maximum White Tiles Covered by a Carpet	Greedy		Medium
+===========7-16===============
 2286	Booking Concert Tickets in Groups	Segment Tree		Hard
 2213	Longest Substring of One Repeating Character	Heap		Hard
 2102	Sequentially Ordinal Rank Tracker	Heap	Priority Queue	Hard
