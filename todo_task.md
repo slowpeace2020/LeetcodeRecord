@@ -78,13 +78,13 @@
 ✅8/24/2022 496
 ✅8/24/2022 84
 ✅8/24/2022 42
-2290	Minimum Obstacle Removal to Reach Corner	BFS		Medium
-2258	Escape the Spreading Fire	BFS	Binary Search	Hard
+✅8/24/2022 2290	Minimum Obstacle Removal to Reach Corner	BFS		Medium
+✅8/25/2022 2258	Escape the Spreading Fire	BFS	Binary Search	Hard
 490*	The Maze	BFS		Easy
 ===========7-14===============
-2306	Naming a Company	Greedy		Hard
-2275	Largest Combination With Bitwise AND Greater Than Zero	Greedy	Bit Manipulation	Medium
-2216	Minimum Deletions to Make Array Beautiful	Greedy		Medium
+✅8/25/2022 2306	Naming a Company	Greedy		Hard
+✅8/25/2022 2275	Largest Combination With Bitwise AND Greater Than Zero	Greedy	Bit Manipulation	Medium
+✅8/25/2022 2216	Minimum Deletions to Make Array Beautiful	Greedy		Medium
 ===========7-15===============
 2234	Maximum Total Beauty of the Gardens	Greedy		Hard
 2233	Maximum Product After K Increments	Greedy		Hard

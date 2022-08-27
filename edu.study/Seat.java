@@ -77,6 +77,7 @@ public class Seat {
 
     }
 
+
     public static String test(String s){
         while(s.contains("AB")||s.contains("BA")||s.contains("ZY")||s.contains("YZ")){
             s = s.replaceAll("BA", "");
@@ -89,9 +90,27 @@ public class Seat {
         return s;
     }
 
+    public double calculateTax(int[][] brackets, int income) {
+        double ans = income>brackets[0][0]? (double)(brackets[0][0]*brackets[0][1])/100:(double)income*brackets[0][1]/100;
+        income-=brackets[0][0];
+        int index =1;
+        while(income>0){
+            int value = brackets[index][0]-brackets[index-1][0];
+            double tax = value>income? income:value;
+            System.out.println(tax);
+            System.out.println(tax*brackets[index][1]/100);
+            ans+= (tax*brackets[index][1])/100;
+//            System.out.println(ans);
+            income-=value;
+        }
+
+        return ans;
+    }
+
     public static void main(String[] args) {
         Seat seat = new Seat();
 //        seat.solution(3,3,new int[][]{{0,0},{0,1},{1,0}});
-        test("XYX");
+        seat.calculateTax(new int[][]{{3,50},{7,10},{12,25}},10);
+//        seat.calculateTax(new int[][]{{3,84},{4,91},{5,62}},4);
     }
 }

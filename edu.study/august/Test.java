@@ -41,7 +41,6 @@ public class Test {
 
     }
 
-
     public static void main(String[] args) {
         int a,b,c;
         int d=3,e=4,f=5;
