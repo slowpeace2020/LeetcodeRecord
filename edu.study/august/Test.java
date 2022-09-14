@@ -1,5 +1,8 @@
 package august;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Stack;
 
 public class Test {
@@ -41,11 +44,79 @@ public class Test {
 
     }
 
+    public int maximumWhiteTiles(int[][] tiles, int carpetLen) {
+        PriorityQueue<int[]> queue = new PriorityQueue<>((a, b)->(a[0]==b[0]?a[1]-b[1]:a[0]-b[0]));
+
+        for(int[] tile:tiles){
+            queue.add(tile);
+        }
+
+        int[] pre = queue.poll();
+        int res =   Math.min(carpetLen,pre[1]-pre[0]+1);
+
+        while(!queue.isEmpty()){
+            int[] cur = queue.poll();
+            if(cur[0]>pre[1]+1){
+                res = Math.max(res,Math.min(carpetLen,pre[1]-pre[0]+1));
+                pre = cur;
+            }else{
+                pre[1] = Math.max(pre[1],cur[1]);
+            }
+        }
+
+        res = Math.max(res,Math.min(carpetLen,pre[1]-pre[0]+1));
+        return res;
+    }
+
+    long solution(String[] queryType, int[][] query) {
+        Map<Integer,Long> map = new HashMap<>();
+        int keyOffset = 0;
+        int valueOffset = 0;
+        long ans = 0;
+        for(int i=0;i<queryType.length;i++){
+            String operate = queryType[i];
+            int[] nums = query[i];
+            if(operate.equals("insert")){
+                int key = nums[0]-keyOffset;
+                int value = nums[1]-valueOffset;
+                map.put(key, (long)value);
+            }
+            if(operate.equals("addToKey")){
+                keyOffset+=nums[0];
+            }
+            if(operate.equals("addToValue")){
+                valueOffset+=nums[0];
+            }
+            if(operate.equals("get")){
+                long value = map.get(nums[0])+valueOffset;
+
+                ans = value;
+            }
+        }
+        System.out.println(valueOffset);
+        System.out.println(ans);
+        return ans;
+
+    }
+
+
     public static void main(String[] args) {
         int a,b,c;
         int d=3,e=4,f=5;
         Test test = new Test();
-        test.maximumScore(new int[]{1,4,3,7,4,5},3);
+        test.solution(new String[]{"insert",
+                "addToValue",
+                "get",
+                "insert",
+                "addToKey",
+                "addToValue",
+                "get"},new int[][]{{1,2},
+                {2},
+                {1},
+                {2,3},
+                {1},
+                {-1},
+                {3}});
         System.out.println(d);
 
     }

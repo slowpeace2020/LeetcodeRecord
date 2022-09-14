@@ -86,50 +86,50 @@
 ✅8/25/2022 2275	Largest Combination With Bitwise AND Greater Than Zero	Greedy	Bit Manipulation	Medium
 ✅8/25/2022 2216	Minimum Deletions to Make Array Beautiful	Greedy		Medium
 ===========7-15===============
-2234	Maximum Total Beauty of the Gardens	Greedy		Hard
-2233	Maximum Product After K Increments	Greedy		Hard
-2271	Maximum White Tiles Covered by a Carpet	Greedy		Medium
+✅8/29/2022 2234	Maximum Total Beauty of the Gardens	Greedy		Hard
+✅8/29/2022 2233	Maximum Product After K Increments	Greedy		Hard
+✅8/29/2022 2271	Maximum White Tiles Covered by a Carpet	Greedy		Medium
 ===========7-16===============
-2286	Booking Concert Tickets in Groups	Segment Tree		Hard
-2213	Longest Substring of One Repeating Character	Heap		Hard
-2102	Sequentially Ordinal Rank Tracker	Heap	Priority Queue	Hard
-1825	Finding MK Average    	Heap		Hard
-2276	Count Integers in Intervals	Heap		Hard
-715	Range Module	Heap		Hard
-2281	Sum of Total Strength of Wizards	Count Subarray By Element	Presum	Hard
-1498	Number of Subsequences That Satisfy the Given Sum Condition	Count Subarray By Element	Two Pointers	Hard
-2104	Sum of Subarray Ranges	Count Subarray By Element	Stack	Medium
-1856	Maximum Subarray Min-Product	Count Subarray By Element	Stack	Hard
-907	Sum of Subarray Minimums	Count Subarray By Element	Stack	Hard
-828	Count Unique Characters of All Substrings of a Given String	Count Subarray By Element		Hard
-2262	Total Appeal of A String	Count Subarray By Element		Medium
+✅8/30/2022 2286	Booking Concert Tickets in Groups	Segment Tree		Hard
+✅8/31/2022 2213	Longest Substring of One Repeating Character	Heap		Hard
+✅8/31/2022 2102	Sequentially Ordinal Rank Tracker	Heap	Priority Queue	Hard
+✅9/3/2022 1825	Finding MK Average    	Heap		Hard
+✅9/4/2022 2276	Count Integers in Intervals	Heap		Hard
+✅9/4/2022 715	Range Module	Heap		Hard
+✅9/4/2022 2281	Sum of Total Strength of Wizards	Count Subarray By Element	Presum	Hard
+✅9/4/2022 1498	Number of Subsequences That Satisfy the Given Sum Condition	Count Subarray By Element	Two Pointers	Hard
+✅9/4/2022 2104	Sum of Subarray Ranges	Count Subarray By Element	Stack	Medium
+✅9/5/2022 1856	Maximum Subarray Min-Product	Count Subarray By Element	Stack	Hard
+✅9/5/2022 907	Sum of Subarray Minimums	Count Subarray By Element	Stack	Hard
+✅9/7/2022 828	Count Unique Characters of All Substrings of a Given String	Count Subarray By Element		Hard
+✅9/7/2022 2262	Total Appeal of A String	Count Subarray By Element		Medium
 2158*	Amount of New Area Painted Each Day	Diff Array		Hard
-218	The Skyline Problem	Diff Array		Hard
-798	Smallest Rotation with Highest Score	Diff Array		Hard
-1674	Minimum Moves to Make Array Complementary	Diff Array		Hard
-995	Minimum Number of K Consecutive Bit Flips	Diff Array		Hard
+✅9/7/2022 218	The Skyline Problem	Diff Array		Hard
+✅9/7/2022 798	Smallest Rotation with Highest Score	Diff Array		Hard
+✅9/7/2022 1674	Minimum Moves to Make Array Complementary	Diff Array		Hard
+✅9/8/2022 995	Minimum Number of K Consecutive Bit Flips	Diff Array		Hard
 2237*	Count Positions on Street With Required Brightness	Diff Array		Easy
-2251	Number of Flowers in Full Bloom	Diff Array		Medium
-1943	Describe the Painting	Diff Array		Medium
+✅9/8/2022 2251	Number of Flowers in Full Bloom	Diff Array		Medium
+✅9/8/2022 1943	Describe the Painting	Diff Array		Medium
 2015*	Average Height of Buildings in Each Segment	Diff Array		Medium
-1589	Maximum Sum Obtained of Any Permutation	Diff Array		Medium
-1871	Jump Game VII	Diff Array		Medium
+✅9/8/2022 1589	Maximum Sum Obtained of Any Permutation	Diff Array		Medium
+✅9/8/2022 1871	Jump Game VII	Diff Array		Medium
 759*	Employee Free Time	Diff Array		Medium
-1109	Corporate Flight Bookings	Diff Array		Easy
-1094	Car Pooling	Diff Array		Easy
-1893	Check if All the Integers in a Range Are Covered	Diff Array		Easy
+✅9/8/2022 1109	Corporate Flight Bookings	Diff Array		Easy
+✅9/8/2022 1094	Car Pooling	Diff Array		Easy
+✅9/8/2022 1893	Check if All the Integers in a Range Are Covered	Diff Array		Easy
 253*	Meeting Rooms II	Diff Array		Easy
-732	My Calendar III	Diff Array		Easy
-56	Merge Intervals	Diff Array		Easy
-1878	Get Biggest Three Rhombus Sums in a Grid	Presum		Medium
-1906	Minimum Absolute Difference Queries	Presum		Medium
-2245	Maximum Trailing Zeros in a Cornered Path	Presum		Medium
-2246	Longest Path With Different Adjacent Characters	Tree		Medium
-124	Binary Tree Maximum Path Sum	Tree		Medium
-2049	Count Nodes With the Highest Score	Tree		Medium
-687	Longest Univalue Path	Tree		Easy
-1522*	Diameter of N-Ary Tree	Tree		Medium
-543	Diameter of Binary Tree	Tree		Easy
+✅9/8/2022 732	My Calendar III	Diff Array		Easy
+✅9/8/2022 56	Merge Intervals	Diff Array		Easy
+✅9/11/2022 1878	Get Biggest Three Rhombus Sums in a Grid	Presum		Medium
+✅9/11/2022 1906	Minimum Absolute Difference Queries	Presum		Medium
+✅9/11/2022 2245	Maximum Trailing Zeros in a Cornered Path	Presum		Medium
+✅9/11/2022 2246	Longest Path With Different Adjacent Characters	Tree		Medium
+✅9/11/2022 124	Binary Tree Maximum Path Sum	Tree		Medium
+✅9/13/2022 2049	Count Nodes With the Highest Score	Tree		Medium
+✅9/13/2022 687	Longest Univalue Path	Tree		Easy
+✅9/13/2022 1522*	Diameter of N-Ary Tree	Tree		Medium
+✅9/13/2022 543	Diameter of Binary Tree	Tree		Easy
 354	Russian Doll Envelopes	Greedy	Sort+LIS	Hard
 1996	The Number of Weak Characters in the Game	Greedy	Sort+Stack	Medium
 2250	Count Number of Rectangles Containing Each Point	Greedy	Sort+Bucket	Medium
