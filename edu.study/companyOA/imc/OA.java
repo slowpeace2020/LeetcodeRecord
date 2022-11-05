@@ -62,4 +62,46 @@ public class OA {
 
         return ans;
     }
+
+    long solution(String[] queryType, int[][] query) {
+        long ans = 0;
+        int addKey = 0;
+        int addValue = 0;
+        int n = queryType.length;
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int i=0;i<n;i++){
+            String operation = queryType[i];
+            int[] oneQuery = query[i];
+            if(operation.equals("insert")){
+                int key = oneQuery[0]-addKey;
+                int value = oneQuery[1]-addValue;
+                map.put(key, value);
+            }else if(operation.equals("get")){
+                int key = oneQuery[0]+addKey;
+                int value = map.getOrDefault(key, 0);
+                if(map.containsKey(key)){
+                    value+=addValue;
+                }
+                ans+=value;
+            }else if(operation.equals("addToValue")){
+                addValue+=oneQuery[0];
+            }else if(operation.equals("addToKey")){
+                addKey+=oneQuery[0];
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        OA test = new OA();
+        test.solution(new String[]{"insert",
+                "insert",
+                "addToValue",
+                "addToKey",
+                "get"},new int[][]{{1,2},
+                {2,3},
+                {2},
+                {1},
+                {3}});
+    }
 }

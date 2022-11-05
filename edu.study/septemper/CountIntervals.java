@@ -200,6 +200,9 @@ public class CountIntervals {
     }
 
         public static void main(String[] args) {
+            System.out.printf("Laptop %d%n", 1);
+            System.out.printf("Laptop %d%n", 2);
+            System.out.printf("Laptop %d%n", 3);
         CountIntervals countIntervals = new CountIntervals();
         countIntervals.maxSumRangeQuery(new int[]{1,2,3,4,5},
             new int[][]{{1,3},{0,1}});

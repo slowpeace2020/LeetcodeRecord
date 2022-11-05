@@ -130,61 +130,61 @@
 ✅9/13/2022 687	Longest Univalue Path	Tree		Easy
 ✅9/13/2022 1522*	Diameter of N-Ary Tree	Tree		Medium
 ✅9/13/2022 543	Diameter of Binary Tree	Tree		Easy
-354	Russian Doll Envelopes	Greedy	Sort+LIS	Hard
-1996	The Number of Weak Characters in the Game	Greedy	Sort+Stack	Medium
-2250	Count Number of Rectangles Containing Each Point	Greedy	Sort+Bucket	Medium
-2141	Maximum Running Time of N Computers	Binary Search		Medium
-1648	Sell Diminishing-Valued Colored Balls	Binary Search		Hard
-1201	Ugly Number III	Binary Search		Hard
-1231*	Divide Chocolate	Binary Search		Medium
-1482	Minimum Number of Days to Make m Bouquets  	Binary Search		Medium
-1802	Maximum Value at a Given Index in a Bounded Array 	Binary Search		Medium
-1552	Magnetic Force Between Two Balls	Binary Search		Medium
-1898	Maximum Number of Removable Characters	Binary Search		Medium
-2064	Minimized Maximum of Products Distributed to Any Store	Binary Search		Medium
-1292	Maximum Side Length of a Square with Sum Less than or Equal to Threshold	Binary Search		Medium
-1870	Minimum Speed to Arrive on Time	Binary Search		Medium
-1300	Sum of Mutated Array Closest to Target	Binary Search		Medium
-1283	Find the Smallest Divisor Given a Threshold	Binary Search		Medium
-1608	Special Array With X Elements Greater Than or Equal X	Binary Search		Medium
-1891*	Cutting Ribbons	Binary Search		Easy
-1011	Capacity To Ship Packages Within D Days	Binary Search		Medium
-2226	Maximum Candies Allocated to K Children	Binary Search		Easy
-2223	Sum of Scores of Built Strings	Rolling Hash	Binary Search	Hard
-1923	Longest Common Subpath	Rolling Hash	Binary Search	Hard
+✅9/14/2022 354	Russian Doll Envelopes	Greedy	Sort+LIS	Hard
+✅9/15/2022 1996	The Number of Weak Characters in the Game	Greedy	Sort+Stack	Medium
+✅9/16/2022 2250	Count Number of Rectangles Containing Each Point	Greedy	Sort+Bucket	Medium
+✅9/20/2022 2141	Maximum Running Time of N Computers	Binary Search		Medium
+✅9/20/2022 1648	Sell Diminishing-Valued Colored Balls	Binary Search		Hard
+✅9/20/2022 1201	Ugly Number III	Binary Search		Hard
+✅9/20/2022 1231*	Divide Chocolate	Binary Search		Medium
+✅9/20/2022 1482	Minimum Number of Days to Make m Bouquets  	Binary Search		Medium
+✅9/20/2022 1802	Maximum Value at a Given Index in a Bounded Array 	Binary Search		Medium
+✅9/20/2022 1552	Magnetic Force Between Two Balls	Binary Search		Medium
+✅9/22/2022 1898	Maximum Number of Removable Characters	Binary Search		Medium
+✅9/22/2022 2064	Minimized Maximum of Products Distributed to Any Store	Binary Search		Medium
+✅9/22/2022 1292	Maximum Side Length of a Square with Sum Less than or Equal to Threshold	Binary Search		Medium
+✅9/23/2022 1870	Minimum Speed to Arrive on Time	Binary Search		Medium
+✅9/23/2022 1300	Sum of Mutated Array Closest to Target	Binary Search		Medium
+✅9/23/2022 1283	Find the Smallest Divisor Given a Threshold	Binary Search		Medium
+✅9/23/2022 1608	Special Array With X Elements Greater Than or Equal Binary Search		Medium
+✅9/23/2022 1891*	Cutting Ribbons	Binary Search		Easy
+✅9/23/2022 1011	Capacity To Ship Packages Within D Days	Binary Search		Medium
+✅9/23/2022 2226	Maximum Candies Allocated to K Children	Binary Search		Easy
+✅9/23/2022 2223	Sum of Scores of Built Strings	Rolling Hash	Binary Search	Hard
+✅9/30/2022 1923	Longest Common Subpath	Rolling Hash	Binary Search	Hard
 1044	Longest Duplicate Substring	Rolling Hash	Binary Search	Hard
 1062*	Longest Repeating Substring	Rolling Hash	Binary Search	Medium
 2156	Find Substring With Given Hash Value	Rolling Hash		Medium
 2168*	Unique Substrings With Equal Digit Frequency	Rolling Hash		Medium
-2217	Find Palindrome With Fixed Length	Panlindrome	Math	Medium
-2081	Sum of k-Mirror Numbers	Panlindrome	Brute Force	Medium
-906	Super Palindromes	Panlindrome	Brute Force	Medium
-866	Prime Palindrome	Panlindrome	Brute Force	Medium
-479	Largest Palindrome Product	Panlindrome	Brute Force	Medium
-2189*	Number of Ways to Build House of Cards	DP		Medium
-2218	Maximum Value of K Coins From Piles	DP		Hard
-2209	Minimum White Tiles After Covering With Carpets	DP		Medium
-2188	Minimum Time to Finish the Race	DP		Hard
-2202	Maximize the Topmost Element After K Moves	Greedy	Constructive	Hard
-499*	The Maze III	Dijkstra		Hard
-787	Cheapest Flights Within K Stops	Dijkstra	DP	Hard
-2093*	Minimum Cost to Reach City With Discounts	Dijkstra 		Hard
-882	Reachable Nodes In Subdivided Graph	Dijkstra		Hard
-1786	Number of Restricted Paths From First to Last Node	Dijkstra	DFS	Medium
-1976	 Number of Ways to Arrive at Destination	Dijkstra 	DFS	Medium
-505*	The Maze II	Dijkstra		Medium
-1514	Path with Maximum Probability	Dijkstra		Medium
-2203	Minimum Weighted Subgraph With the Required Paths	Dijkstra 		Medium
-1368	Minimum Cost to Make at Least One Valid Path in a Grid	Dijkstra		Medium
-743	Network Delay Time	Dijkstra		Medium
-1627	Graph Connectivity With Threshold	Union Find		Medium
-765	Couples Holding Hands	Union Find		Hard
-1722	Minimize Hamming Distance After Swap Operations 	Union Find		Medium
-2157	Groups of Strings	Union Find	Bit Mask	Hard
-2193	Minimum Number of Moves to Make Palindrome	Greedy		Hard
-42	Trapping Rain Water	Stack	Three Pass	Hard
-334	Increasing Triplet Subsequence	LIS	Three Pass	Medium
-2167	Minimum Time to Remove All Cars Containing Illegal Goods	DP	Three Pass	Hard
+✅9/30/2022 2217	Find Palindrome With Fixed Length	Panlindrome	Math	Medium
+✅9/30/2022 2081	Sum of k-Mirror Numbers	Panlindrome	Brute Force	Medium
+✅9/30/2022 906	Super Palindromes	Panlindrome	Brute Force	Medium
+✅9/30/2022 866	Prime Palindrome	Panlindrome	Brute Force	Medium
+✅9/30/2022 479	Largest Palindrome Product	Panlindrome	Brute Force	Medium
+✅9/30/2022 2189*	Number of Ways to Build House of Cards	DP		Medium
+✅9/30/2022 2218	Maximum Value of K Coins From Piles	DP		Hard
+✅10/4/2022 2209	Minimum White Tiles After Covering With Carpets	DP		Medium
+✅10/20/2022 2188	Minimum Time to Finish the Race	DP		Hard
+✅10/20/2022 2202	Maximize the Topmost Element After K Moves	Greedy	Constructive	Hard
+✅10/21/2022 499*	The Maze III	Dijkstra		Hard
+✅10/22/2022 787	Cheapest Flights Within K Stops	Dijkstra	DP	Hard
+✅10/22/2022 2093*	Minimum Cost to Reach City With Discounts	Dijkstra 		Hard
+✅10/22/2022 882	Reachable Nodes In Subdivided Graph	Dijkstra		Hard
+✅10/22/2022 1786	Number of Restricted Paths From First to Last Node	Dijkstra	DFS	Medium
+✅10/24/2022 1976	 Number of Ways to Arrive at Destination	Dijkstra 	DFS	Medium
+✅10/24/2022 505*	The Maze II	Dijkstra		Medium
+✅10/24/2022 1514	Path with Maximum Probability	Dijkstra		Medium
+✅10/24/2022 2203	Minimum Weighted Subgraph With the Required Paths	Dijkstra 		Medium
+✅10/30/2022 1368	Minimum Cost to Make at Least One Valid Path in a Grid	Dijkstra		Medium
+✅10/30/2022 743	Network Delay Time	Dijkstra		Medium
+✅10/30/2022 1627	Graph Connectivity With Threshold	Union Find		Medium
+✅10/30/2022 765	Couples Holding Hands	Union Find		Hard
+✅10/30/2022 1722	Minimize Hamming Distance After Swap Operations 	Union Find		Medium
+✅11/3/2022 2157	Groups of Strings	Union Find	Bit Mask	Hard
+✅11/3/2022 2193	Minimum Number of Moves to Make Palindrome	Greedy		Hard
+✅11/3/2022 42	Trapping Rain Water	Stack	Three Pass	Hard
+✅11/3/2022 334	Increasing Triplet Subsequence	LIS	Three Pass	Medium
+✅11/3/2022 2167	Minimum Time to Remove All Cars Containing Illegal Goods	DP	Three Pass	Hard
 1638	Count Substrings That Differ by One Character	DP	Three Pass	Medium
 1671	Minimum Number of Removals to Make Mountain Array	DP	Three Pass	Medium
 1664	Ways to Make a Fair Array	Greedy	Three Pass	Medium
@@ -284,7 +284,7 @@
 206	Reverse Linked List	Linked List	Reverse Linked List	Medium
 2069	Walking Robot Simulation II	Simulation		Medium
 2071	Maximum Number of Tasks You Can Assign	Binary Search	Heap	Hard
-1608	Special Array With X Elements Greater Than or Equal X	Binary Search	Bucket Sort	Medium
+1608	Special Array With X Elements Greater Than or Equal Binary Search	Bucket Sort	Medium
 1648	Sell Diminishing-Valued Colored Balls	Binary Search	Greedy	Medium
 1898	Maximum Number of Removable Characters	Binary Search	Two Pointers	Medium
 1870	Minimum Speed to Arrive on Time	Binary Search		Medium
@@ -332,7 +332,7 @@
 402	Remove K Digits	Stack	Greedy	Hard
 1081	Smallest Subsequence of Distinct Characters	Stack	Greedy	Medium
 316	Remove-Duplicate-Letters	Stack	Greedy	Hard
-2029	Stone Game IX	Others		Hard
+2029	Stone Game IOthers		Hard
 1542	Find Longest Awesome Substring	Hash	Prefix	Hard
 930	Binary Subarrays With Sum	Hash	Prefix	Medium
 1371	Find the Longest Substring Containing Vowels in Even Counts	Hash	Prefix	Hard
@@ -701,7 +701,7 @@
 416	Partition Equal Subset Sum	DP	Knapsack	Medium
 1567	Maximum Length of Subarray With Positive Product	Array		Medium
 1590	Make Sum Divisible by P	Hash	Prefix	Medium
-1608	Special Array With X Elements Greater Than or Equal X	Binary Search	Bucket Sort	Medium
+1608	Special Array With X Elements Greater Than or Equal Binary Search	Bucket Sort	Medium
 1611	Minimum One Bit Operations to Make Integers Zero	Recursion	Math	Hard
 1610	Maximum Number of Visible Points	Math		Hard
 1606	Find Servers That Handled Most Number of Requests	Heap		Medium
@@ -1506,85 +1506,77 @@
 				
 	以上是建立残酷群之后的每日一题汇总			
 	以下是原东哥算法群的每日一题汇总			
-				
-X				
-X				
-X				
-X				
 390	Elimination Game	recursion		Medium
 29	Divide Two Integers	Math		Medium
 171	Excel Sheet Column Title	Math		Easy
-X				
-X				
+			
+			
 150	Evaluate Reverse Polish Notation	Stack		Easy
 855	Exam Room	Array		Hard
 442	Find All Duplicates in an Array	Sort		Medium
-X				
+			
 78	Subsets	Bit Manipulation		Medium
-X				
-X				
+			
+			
 115	Distinct Subsequences			
 630	Course Schedule III	Greedy		Hard
 697	Degree of an Array			Easy
 575	Distribute Candies	Math		Easy
 538	Convert BST to Greater Tree	Tree		Medium
-X				
-X				
 787	Cheapest Flights Within K Stops	DP		Hard
 201	Bitwise AND of Numbers Range	Bit Manipulation		Medium
 173	Binary Search Tree Iterator	Stack		Medium
 107	Binary Tree Level Order Traversal II	BFS		Easy
 704	Binary Search	Binary Search		Easy
-X				
 124	Binary Tree Maximum Path	Tree	DFS	Hard
 741	Cherry Pickup	DP		Hard
 135	Candy	Greedy		Medium
 815	Bus Routes	BFS		Hard
 312	Burst Ballons	DP		Hard
 605	Can Place Flowers	Array		Medium
-X				
+			
 401	Binary Watch	Bit Manipulation		Medium
-X				
+			
 199	Binary Tree Right Side View	BFS		Medium
 319	Bulb Switcher	Math		Medium
 257	Binary Tree Paths	DFS		Easy
 868	Binary Gap	Bit Manipulation		Easy
-X				
+			
 123	Best Time to Buy and Sell Stock III	DP		Medium
 122	Best Time to Buy and Sell Stock II	Math		Easy
-X				
+			
 39	Combination Sum	DFS		Easy
 46	Permutations			Medium
-X				
-X				
+			
+			
 623	Add One Row to Tree	Tree		Easy
 230	Kth Smalleset Element in a BST	Tree	DFS	Medium
 337	House Robber III	Tree	DFS	Hard
 863	All Nodes Distance K in Binary Tree	Tree	BFS	Medium
-X				
+			
 94	Binary Tree Inorder Traversal	Tree		Medium
-X				
-X				
+			
+			
 859	Buddy Strings	String		Easy
 				
 537	complex number multiplication			
 58	Length of Last Word			Easy
 38	Count and Say	recursion	String	Easy
-X				
-X				
+			
+			
 350	Intersection of Two Arrays II	Binary Search		Easy
-X				
+			
 69	Sqrt(x)	Binary Search		Medium
 278	First Bad Version	Binary Search		Easy
 29	Divide Two Integers	Hash		Medium
-X	-	-	-	-
+-	-	-	-
 726	Number of Atoms	Stack		Medium
 761	Special Binary String	recursion		Hard
 779	K-th Symbol in Grammer	recursion		Medium
 794	Valid Tic-Tac-Toe State	Others		Medium
 698	Partition to K Equal Sum Subsets	DFS		Medium
 687	Longest Univalue Path	Tree	DFS	Medium
-X	-	-	-	-
+-	-	-	-
 713	Subarray Product Less Than K	Two Pointers		Easy
 532	K-diff Pairs in an Array	Hash		Easy
 844	Backspace String Compare	String		Easy
@@ -1598,41 +1590,41 @@ X	-	-	-	-
 204	Count Primes	Math		Medium
 205	Isomorphic Strings	String		Medium
 187	Repeated DNA Sequences	Hash		Easy
-X	-	-		-
-X	-	-		-
+-	-		-
+-	-		-
 521	Longest Uncommon Subsequence I	Array		Easy
 459	Repeated Substring Pattern	Array		Medium
 58	Length of Last Word	Array		Easy
 5	Longest Palindromic Substring	Array		Medium
 66	Plus One	Array		Easy
 485	Max Consecutive Ones	Array		Easy
-X	-	-		-
+-	-		-
 611	Valid Triangle Number	array	Math	Medium
 228	Summary Ranges	array		Medium
-X	-	-		-
+-	-		-
 832	Flipping an Image	array		Easy
 35	Search Insert Position	array		Easy
 18	4 Sum			
 814	Binary Tree Pruning	Tree	DFS	Easy
-X	-	-		-
-X	-	-		-
-X	-	-		-
+-	-		-
+-	-		-
+-	-		-
 110	Balanced Binary Tree	Tree		Easy
-X	-	-		-
+-	-		-
 94	Binary Tree Inorder Traversal	Tree		Medium
-X	-	-		-
+-	-		-
 526	Beautiful Arrangement	array		Medium
 686	Repeated String Match	String		Easy
 332	Reconstruct Itinerary	DFS		Hard
-X	-	-		
+-	-		
 414	Third Maximum Number	Hash		Easy
-X	-	-		
+-	-		
 384	Shuffle an Array	others	random	Medium
 383	Ransom Note	Hash		Easy
-X	-	-		-
+-	-		-
 365	Water and Jug Problem	others		Hard
-X	-	-		-
-X	-	-		-
+-	-		-
+-	-		-
 357	Count Numbers with Unique Digits	Math	Combo	Medium
 343	Interger Break	Math		Medium
 328	Odd Even Linked List	Linked List		Easy
@@ -1645,7 +1637,7 @@ X	-	-		-
 214	Shortest Palindrome	Other		Hard
 206	Reverse Linked List	Linked List		Medium
 203	Remove Linked List Elements	Linked List		Easy
-X				
+			
 188	Best Time to Buy and Sell Stock IV	DP		Hard
 148	Sort List	Linked List	Sort	Hard
 132	Palindrome Partitioning II	DP		Medium
@@ -1685,7 +1677,7 @@ X
 399	Evaluate Division	DFS		Medium
 698	Partition to K Equal Sum Subsets	DFS		Medium
 791	Custom Sort String	Hash	Python	Easy
-X				
+			
 503	Next Greater Element II	Stack		Hard
 22	Generate Parentheses	DFS		Easy
 504	Base 7	String		Easy
