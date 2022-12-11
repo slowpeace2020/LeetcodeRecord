@@ -185,18 +185,29 @@
 ✅11/3/2022 42	Trapping Rain Water	Stack	Three Pass	Hard
 ✅11/3/2022 334	Increasing Triplet Subsequence	LIS	Three Pass	Medium
 ✅11/3/2022 2167	Minimum Time to Remove All Cars Containing Illegal Goods	DP	Three Pass	Hard
-1638	Count Substrings That Differ by One Character	DP	Three Pass	Medium
-1671	Minimum Number of Removals to Make Mountain Array	DP	Three Pass	Medium
-1664	Ways to Make a Fair Array	Greedy	Three Pass	Medium
-1653	Minimum Deletions to Make String Balanced	Greedy	Three Pass	Medium
-1769	Minimum Number of Operations to Move All Balls to Each Box	Greedy	Three Pass	Medium
-1888	Minimum Number of Flips to Make the Binary String Alternating 	Greedy	Three Pass	Medium
+✅11/4/2022 1638	Count Substrings That Differ by One Character	DP	Three Pass	Medium
+✅11/4/2022 1671	Minimum Number of Removals to Make Mountain Array	DP	Three Pass	Medium
+✅11/4/2022 1664	Ways to Make a Fair Array	Greedy	Three Pass	Medium
+✅11/5/2022 1653	Minimum Deletions to Make String Balanced	Greedy	Three Pass	Medium
+✅11/5/2022 1769	Minimum Number of Operations to Move All Balls to Each Box	Greedy	Three Pass	Medium
+✅11/5/2022 1888	Minimum Number of Flips to Make the Binary String Alternating 	Greedy	Three Pass	Medium
 2163	Minimum Difference in Sums After Removal of Elements	Priority Queue	Three Pass	Medium
-2147	Number of Ways to Divide a Long Corrido	Math		Easy
-2183	Count Array Pairs Divisible by K	Math		Medium
+✅11/6/2022 2147	Number of Ways to Divide a Long Corrido	Math		Easy
+✅11/6/2022 2183	Count Array Pairs Divisible by K	Math		Medium
 2179	Count Good Triplets in an Array	BIT		Hard
-315	Count of Smaller Numbers After Self  	Divide & Conque		Medium
-1713	Minimum Operations to Make a Subsequence	Greedy	LIS	Hard
+✅11/19/2022 315	Count of Smaller Numbers After Self  	Divide & Conque		Medium
+✅11/19/2022 1713	Minimum Operations to Make a Subsequence	Greedy	LIS	Hard
+✅11/19/2022 300 LIS
+✅11/20/2022 435 LIS
+✅11/20/2022 2355  DP+monotonic stack
+✅11/21/2022 646 LIS
+✅11/21/2022 741 DP
+✅11/22/2022 452 LIS
+✅11/22/2022 758 Interval
+✅11/25/2022 315 SegmentTree
+✅11/25/2022 307 SegmentTree
+✅11/26/2022 327 SegmentTree
+✅11/26/2022 1157 SegmentTree
 2152*	Minimum Number of Lines to Cover Points	DP (Iterating Subsets)	BitMask	Hard
 1986	"	Minimum Number of Work Sessions to Finish the Tasks "	DP (Iterating Subsets)	BitMask	Medium
 1655	Distribute Repeating Integers	DP (Iterating Subsets)	BitMask	Hard
